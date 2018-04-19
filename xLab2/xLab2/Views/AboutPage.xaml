@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="xLab2.AboutPage"
+             xmlns:vm="clr-namespace:xLab2;"
+             xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+             Title="{Binding Title}">
+    <ContentPage.BindingContext>
+        <vm:AboutViewModel />
+    </ContentPage.BindingContext>
+    <Label Text="Map" />
+    <maps:Map WidthRequest="320" HeightRequest="200"
+              x:Name="MyMap"
+              IsShowingUser="true"
+              MapType="Hybrid"
+    />
+</ContentPage>

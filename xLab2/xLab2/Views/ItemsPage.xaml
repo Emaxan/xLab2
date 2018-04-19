@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="xLab2.Views.ItemsPage"
+             Title="{Binding Title}"
+             x:Name="BrowseItemsPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView x:Name="ItemsListView"
+                      ItemsSource="{Binding Items}"
+                      VerticalOptions="FillAndExpand"
+                      HasUnevenRows="true"
+                      RefreshCommand="{Binding LoadItemsCommand}"
+                      IsPullToRefreshEnabled="true"
+                      IsRefreshing="{Binding IsBusy, Mode=OneWay}"
+                      CachingStrategy="RecycleElement">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Padding="10" Orientation="Horizontal" HeightRequest="250">
+                                <Image 
+                                    Source="{Binding smPhoto}" 
+                                    HeightRequest="100" 
+                                    WidthRequest="100" 
+                                    Margin="0,0,5,0" 
+                                />
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*" />
+                                        <RowDefinition Height="*" />
+                                        <RowDefinition Height="*" />
+                                    </Grid.RowDefinitions>
+
+                                    <Label 
+                                        Grid.Row="0" 
+                                        Text="{Binding Name}" 
+                                        FontAttributes="Bold" 
+                                        FontSize="{DynamicResource FontSize}" 
+                                        TextColor="{DynamicResource FontColor}" 
+                                        VerticalOptions="Center" 
+                                        Margin="1" 
+                                        LineBreakMode="WordWrap" 
+                                    />
+                                    <Label 
+                                        Grid.Row="1" 
+                                        Text="{Binding Temperature, StringFormat='{0}°C'}" 
+                                        FontSize="{DynamicResource FontSize}" 
+                                        TextColor="{DynamicResource FontColor}" 
+                                        VerticalOptions="Center" 
+                                        Margin="1" 
+                                        LineBreakMode="WordWrap" 
+                                    />
+                                    <Label 
+                                        Grid.Row="2" 
+                                        Text="{Binding Description}" 
+                                        FontSize="{DynamicResource FontSize}" 
+                                        TextColor="{DynamicResource FontColor}" 
+                                        VerticalOptions="FillAndExpand" 
+                                        Margin="1" 
+                                        LineBreakMode="TailTruncation" 
+                                    />
+                                </Grid>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

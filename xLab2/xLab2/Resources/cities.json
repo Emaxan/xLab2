@@ -1,0 +1,50 @@
+[
+  {
+    "id": 2643743,
+    "name": "London",
+    "country": "GB",
+    "smphoto": "https://www.uenchik-toys.ru/file/catalog/pic/thumb1/13dfdd5dfdcd542bde748e53e4abd42b.jpg",
+    "bgphoto": "https://www.uenchik-toys.ru/file/catalog/pic/thumb1/13dfdd5dfdcd542bde748e53e4abd42b.jpg",
+    "description": "aaaaaaaaaaaaaaaaaa",
+    "coord": {
+      "lon": -0.12574,
+      "lat": 51.50853
+    }
+  },
+  {
+    "id": 2644210,
+    "name": "Liverpool",
+    "country": "GB",
+    "smphoto": "https://www.uenchik-toys.ru/file/catalog/pic/thumb1/13dfdd5dfdcd542bde748e53e4abd42b.jpg",
+    "bgphoto": "https://www.uenchik-toys.ru/file/catalog/pic/thumb1/13dfdd5dfdcd542bde748e53e4abd42b.jpg",
+    "description": "aaaaaaaaaaaaaaaaaa",
+    "coord": {
+      "lon": -2.97794,
+      "lat": 53.41058
+    }
+  },
+  {
+    "id": 2759794,
+    "name": "Amsterdam",
+    "country": "NL",
+    "smphoto": "https://www.uenchik-toys.ru/file/catalog/pic/thumb1/13dfdd5dfdcd542bde748e53e4abd42b.jpg",
+    "bgphoto": "https://www.uenchik-toys.ru/file/catalog/pic/thumb1/13dfdd5dfdcd542bde748e53e4abd42b.jpg",
+    "description": "aaaaaaaaaaaaaaaaaa",
+    "coord": {
+      "lon": 4.88969,
+      "lat": 52.374031
+    }
+  },
+  {
+    "id": 6455259,
+    "name": "Paris",
+    "country": "FR",
+    "smphoto": "https://www.uenchik-toys.ru/file/catalog/pic/thumb1/13dfdd5dfdcd542bde748e53e4abd42b.jpg",
+    "bgphoto": "https://www.uenchik-toys.ru/file/catalog/pic/thumb1/13dfdd5dfdcd542bde748e53e4abd42b.jpg",
+    "description": "aaaaaaaaaaaaaaaaaa",
+    "coord": {
+      "lon": 2.35236,
+      "lat": 48.856461
+    }
+  }
+]

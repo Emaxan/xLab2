@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:views="clr-namespace:xLab2.Views;assembly=xLab2"
+             xmlns:xLab2="clr-namespace:xLab2;assembly=xLab2"
+             x:Class="xLab2.Views.SettingsPage">
+
+    <ContentPage.Content>
+        <StackLayout>
+            <Label 
+                Text="{Binding [TextSize].Value, Source={x:Static xLab2:ResourceLoader.Instance}}"
+                HorizontalOptions="CenterAndExpand"
+                FontSize="{DynamicResource Key=FontSize}"
+                TextColor="{DynamicResource Key=FontColor}"
+            />
+            <Slider
+                x:Name="TextSizeSlider"
+                Maximum="20"
+                Minimum="0"
+                ValueChanged="Slider_OnValueChanged"
+            />
+            <Label 
+                Text="{Binding [TextColor].Value, Source={x:Static xLab2:ResourceLoader.Instance}}"
+                HorizontalOptions="CenterAndExpand"
+                FontSize="{DynamicResource Key=FontSize}"
+                TextColor="{DynamicResource Key=FontColor}"
+            />
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Button 
+                    Grid.Column="0" 
+                    BackgroundColor="Black"
+                    Clicked="Button_OnClicked"
+                    FontSize="{DynamicResource Key=FontSize}"
+                    TextColor="{DynamicResource Key=FontColor}"
+                    Text="{Binding [Black].Value, Source={x:Static xLab2:ResourceLoader.Instance}}"
+                />
+                <Button 
+                    Grid.Column="1" 
+                    BackgroundColor="Green"
+                    Clicked="Button_OnClicked"
+                    FontSize="{DynamicResource Key=FontSize}"
+                    TextColor="{DynamicResource Key=FontColor}"
+                    Text="{Binding [Green].Value, Source={x:Static xLab2:ResourceLoader.Instance}}"
+                />
+                <Button 
+                    Grid.Column="2" 
+                    BackgroundColor="Yellow"
+                    Clicked="Button_OnClicked"
+                    FontSize="{DynamicResource Key=FontSize}"
+                    TextColor="{DynamicResource Key=FontColor}"
+                    Text="{Binding [Yellow].Value, Source={x:Static xLab2:ResourceLoader.Instance}}"
+                />
+                <Button 
+                    Grid.Column="3" 
+                    BackgroundColor="Blue"
+                    Clicked="Button_OnClicked"
+                    FontSize="{DynamicResource Key=FontSize}"
+                    TextColor="{DynamicResource Key=FontColor}"
+                    Text="{Binding [Blue].Value, Source={x:Static xLab2:ResourceLoader.Instance}}"
+                />
+            </Grid>
+
+            <Label 
+                Text="{Binding [Language].Value, Source={x:Static xLab2:ResourceLoader.Instance}}"
+                HorizontalOptions="CenterAndExpand"
+                FontSize="{DynamicResource Key=FontSize}"
+                TextColor="{DynamicResource Key=FontColor}"
+            />
+            <Button 
+                Text="{Binding [RU].Value, Source={x:Static xLab2:ResourceLoader.Instance}}"
+                FontSize="{DynamicResource Key=FontSize}"
+                TextColor="{DynamicResource Key=FontColor}"
+                Clicked="RuButton_OnClicked"
+            />
+            <Button 
+                Text="{Binding [EN].Value, Source={x:Static xLab2:ResourceLoader.Instance}}"
+                FontSize="{DynamicResource Key=FontSize}"
+                TextColor="{DynamicResource Key=FontColor}"
+                Clicked="EnButton_OnClicked"
+            />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
